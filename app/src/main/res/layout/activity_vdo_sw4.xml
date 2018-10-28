@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VdoSw4Activity">
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ส่วนผสม"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:text="แป้งข้าวเหนียว 1 ถ้วย\n
+หัวกะทิ ½ ถ้วย\n
+มะพร้าวขูด 1 ถ้วย\n
+น้ำตาลมะพร้าว 1½ ถ้วย
+"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="วิธีทำ"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView61"
+        app:srcCompat="@drawable/gg"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="1.นำน้ำตาลมะพร้าวใส่กระทะทองผสมน้ำนิดหน่อย ตั้งไฟให้ละลาย ใส่มะพร้าวขูด เคี่ยวให้เหนียว ยกขึ้นพักไว้สำหรับทำไส้\n
+2.นวดแป้งข้าวเหนียวเข้ากับหัวกะทิ นำใส่แร่งร่อนในกระทะก้นแบน เปิดไฟอ่อน โรยให้แป้งบางเสมอกัน นำไส้ที่อบไว้มาวางตรงกลาง ใช้เหล็กที่ตัดขนมแซะแป้งตลบเข้าห่อไส้ไว้ ใส่ภาชนะที่มีฝาปิดสนิท อบด้วยควันเทียนให้หอม\n
+"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+    <ImageButton
+        android:id="@+id/imageButton41"
+        android:layout_width="115dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:onClick="clickBack"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back" />
+</android.support.constraint.ConstraintLayout>

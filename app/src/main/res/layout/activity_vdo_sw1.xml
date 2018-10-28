@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VdoSw1Activity">
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ส่วนผสม"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:text="แป้งถั่วเขียว 1 ถ้วย\n
+น้ำดอกมะลิ 8 ถ้วย\n
+น้ำใบเตยข้นๆ 1 ถ้วย\n
+น้ำตาลทราย 3 ถ้วย\n
+หัวกะทิ 1 ถ้วย\n
+น้ำแข็งทุบละเอียด
+"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView49"
+        app:srcCompat="@drawable/gg"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="วิธีทำ"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="1.ผสมแป้งถั่วเขียวกับน้ำดอกมะลิ 5 ถ้วย น้ำใบเตย 1 ถ้วย เข้าด้วยกันผสมให้เข้ากัน อย่าให้แป้งเป็นเม็ด ใส่กระทะทอง ตั้งไฟกวนไปในทิศทางเดียว อย่าให้แป้งติดก้นกระทะ กวนจนแป้งสุก\n
+2.ตักแป้งที่สุกแล้ว ใส่ลงในกระป๋องที่เจาะรูเล็กๆ หลายๆรู ยกกระป๋องขึ้นให้สูงจากอ่างน้ำเย็น แล้วกดแป้งเป็นระยะ ให้แป้งลอดรูออกมาเป็นเส้นๆ ลงอ่างน้ำเย็น คอยเปลี่ยนน้ำให้เย็นอยู่เสมอ เสร็จแล้วเทเส้นซ่าหริ่มใส่ผ้าขาวบาง พักไว้\n
+3.ละลายน้ำตาลทรายและน้ำดอกมะลิอย่างละ 3 ถ้วย ลงในหม้อ ตั้งไฟให้เดือด ยกนำมากรองด้วยผ้าขาวบาง แล้วนำขึ้นตั้งไฟอีกครั้ง ใส่กะทิ คนเข้าด้วยกัน พอเดือดนำลง ทิ้งไว้ให้เย็น\n
+4.วิธีรับประทาน ตักซ่าหริ่มใส่ถ้วย ใส่น้ำกะทิ และน้ำแข็งทุบละเอียด\n
+"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+    <ImageButton
+        android:id="@+id/imageButton38"
+        android:layout_width="115dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@null"
+        android:onClick="clickBack"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainSwActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/imb10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickO"
+                app:srcCompat="@drawable/nkaya" />
+
+            <ImageView
+                android:id="@+id/im12"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/pic" />
+
+            <ImageButton
+                android:id="@+id/imb11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickT"
+                app:srcCompat="@drawable/nsa" />
+
+            <ImageView
+                android:id="@+id/im13"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/pic" />
+
+            <ImageButton
+                android:id="@+id/imb12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickTh"
+                app:srcCompat="@drawable/ntong" />
+
+            <ImageView
+                android:id="@+id/im14"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/pic" />
+
+            <ImageButton
+                android:id="@+id/imb13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickF"
+                app:srcCompat="@drawable/nbua" />
+
+            <ImageView
+                android:id="@+id/im15"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/pic" />
+
+            <ImageButton
+                android:id="@+id/imb14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clickFi"
+                app:srcCompat="@drawable/nlum" />
+
+            <ImageView
+                android:id="@+id/im16"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/pic" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
