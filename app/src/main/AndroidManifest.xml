@@ -9,20 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VdostopActivity">
+
+        <activity android:name=".MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".VdoActivity" />
         <activity android:name=".VdoSw1Activity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".DetailFrActivity" />
@@ -50,7 +49,19 @@
         <activity android:name=".VdostopMe1Activity" />
         <activity android:name=".VdostopMe2Activity" />
         <activity android:name=".VdostopMe3Activity" />
-        <activity android:name=".VdostopMe4Activity"></activity>
+        <activity android:name=".VdostopMe4Activity" />
+        <activity android:name=".DetailMeActivity" />
+        <activity android:name=".DetailMe1Activity" />
+        <activity android:name=".DetailMe3Activity" />
+        <activity android:name=".DetailMe2Activity" />
+        <activity android:name=".DetailMe4Activity" />
+        <activity android:name=".VdoMeActivity" />
+        <activity android:name=".VdoMe1Activity" />
+        <activity android:name=".VdoMe2Activity" />
+        <activity android:name=".VdoMe3Activity" />
+        <activity android:name=".VdoMe4Activity" />
+        <activity android:name=".VdoSwActivity" />
+        <activity android:name=".SearchActivity"></activity>
     </application>
 
 </manifest>

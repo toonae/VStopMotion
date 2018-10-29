@@ -7,16 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class DetailSw1Activity extends AppCompatActivity {
+public class DetailMe1Activity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
     ImageButton volumnImageButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_sw1);
+        setContentView(R.layout.activity_detail_me1);
 
-        volumnImageButton = findViewById(R.id.imageButton17);
+        volumnImageButton = findViewById(R.id.imageButton57);
         mediaPlayer = MediaPlayer.create(this, R.raw.tu);
         volumnImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,12 +32,12 @@ public class DetailSw1Activity extends AppCompatActivity {
             }
         });
     }
-    public void clickVdo1  (View view){
-        Intent intent = new Intent(DetailSw1Activity.this, VdostopSw1Activity.class);
+    public void clickVdo11  (View view){
+        Intent intent = new Intent(DetailMe1Activity.this, VdostopMe1Activity.class);
         startActivity(intent);
     }
-    public void clickNext1  (View view){
-        Intent intent = new Intent(DetailSw1Activity.this, VdoSw1Activity.class);
+    public void clickNext11  (View view){
+        Intent intent = new Intent(DetailMe1Activity.this, VdoMe1Activity.class);
         startActivity(intent);
     }
 

@@ -1,5 +1,6 @@
 package com.example.computer.vstopmotion;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,14 @@ public class DetailSw4Activity extends AppCompatActivity {
 
             }
         });
+    }
+    public void clickVdo4  (View view){
+        Intent intent = new Intent(DetailSw4Activity.this, VdostopSw4Activity.class);
+        startActivity(intent);
+    }
+    public void clickNext4  (View view){
+        Intent intent = new Intent(DetailSw4Activity.this, VdoSw4Activity.class);
+        startActivity(intent);
     }
 
     public void clickBack(View view) {

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VdoMeActivity">
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ส่วนผสม"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="8dp"
+        android:text="เนื้อหมู หั่นเป็นชิ้นเล็กๆ ลวก กุ้งลวก อย่างละ 1 ถ้วย\n
+วุ้นเส้น แช่น้ำตัดท่อน ½ ถ้วย\n
+เห็ดหูหนู ลวก หั่น ½ ถ้วย\n
+แตงกวาปอกเปลือก หั่นเป็นแว่น 2 หัว\n
+หอมใหญ่ปอกเปลือก หั่นขวางบางๆ 2 หัว\n
+กระเทียม 15 กลีบ\n
+พริกขี้หนู 10 เม็ด\n
+รากผักชีสับหยาบ 1 ช้อนชา\n
+น้ำปลา 2 ช้อนโต๊ะ\n
+น้ำตาลทราย 1 ช้อนโต๊ะ\n
+น้ำมะนาว 5 ช้อนโต๊ะ\n
+กระเทียมดอง สับหยาบ ¼ ถ้วย\n
+ใบสะระแหน่เด็ดใบๆ 1 ถ้วย\n
+พริกชี้ฟ้าแดง หั่นแนวยาว 5 เม็ด\n
+ไข่ไก่ต้มสุก ผ่าเป็นเสี้ยวๆ 4 ฟอง
+"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView76" />
+
+    <ImageView
+        android:id="@+id/imageView61"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView77"
+        app:srcCompat="@drawable/g"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="วิธีทำ"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView61" />
+
+    <TextView
+        android:id="@+id/textView79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="1.ลวกวุ้นเส้นด้วยน้ำเดือด แช่ด้วยน้ำเย็น ผึ่งให้แห้งโขลกกระเทียม พริกขี้หนู รากผักชีพอแหลก ผสมให้เข้ากัน\n
+2.ใส่น้ำตาลทราย น้ำปลา น้ำมะนาว ใส่ส่วนผสม เนื้อหมู กุ้ง วุ้นเส้น เห็ดหูหนู แตงกวา และหอมใหญ่ คลุกเคล้าให้เข้ากันจัดใส่จาน\n
+3.ตกแต่งอาหารด้วยใบสะระแหน่ กระเทียมดอง พริกชี้ฟ้าแดง และไข่ต้ม เสร็จแล้วรับประทานได้ทันที\n"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView78" />
+
+    <ImageButton
+        android:id="@+id/imageButton62"
+        android:layout_width="115dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VdoMe2Activity">
+
+    <TextView
+        android:id="@+id/textView84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ส่วนผสม"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:text="เนื้อสันใน ½ กิโลกรัม\n
+กระเทียม 10 กลีบ\n
+พริกขี้หนู 10 เม็ด\n
+รากผักชีสับละเอียด 1 ช้อนโต๊ะ\n
+น้ำมะนาว 2 ช้อนโต๊ะ\n
+น้ำตาลทราย 1 ช้อนโต๊ะ\n
+น้ำปลา 1 ช้อนโต๊ะ\n
+ตะไคร้ซอย 2 ช้อนโต๊ะ\n
+หัวหอมแดงซอย ½ ถ้วย\n
+ผักชีสับหยาบๆ 1/3 ถ้วย\n
+ผักกาดหอม ใบสะระแหน่ สำหรับจัดจาน
+"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView84" />
+
+    <ImageView
+        android:id="@+id/imageView63"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView85"
+        app:srcCompat="@drawable/g"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="วิธีทำ"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView63" />
+
+    <TextView
+        android:id="@+id/textView87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="1.เนื้อสันในย่างพอสุก แล้วหั่นแฉลบบางๆ\n
+2.โขลกกระเทียม พริกขี้หนู รากผักชี เข้าไปด้วยกันให้ละเอียด\n
+3.ตักเครื่องที่โขลกไว้ใส่ลงชามคลุกเคล้า ใส่เนื้อย่าง หอมแดง ผักชี ตะไคร้ ปรุงรสด้วย น้ำปลา น้ำตาล และน้ำมะนาว คลุกเคล้าทั้งหมดเข้าด้วยกัน ปรุงรสตามที่ต้องการ\n
+4.จัดใส่จานโดยรองจานด้วยใบผักกาดหอมและใบสะระแหน่ ตักพล่าเนื้อวางด้านบน เสร็จแล้วรับประทานได้ทันที\n
+"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="@font/yrsa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView86" />
+
+    <ImageButton
+        android:id="@+id/imageButton66"
+        android:layout_width="115dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@null"
+        android:onClick="clickBack"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back" />
+</android.support.constraint.ConstraintLayout>

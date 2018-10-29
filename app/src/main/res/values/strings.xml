@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">VStopMotion</string>
+
+    <string-array name="data">
+        <item>ยำใหญ่</item>
+        <item>แกงอ่อม</item>
+        <item>แกงไตปลา</item>
+        <item>พล่าเนื้อ</item>
+        <item>ตับเหล็ก</item>
+        <item>ข้าวเหนียวสังขยา</item>
+        <item>ขนมผิง</item>
+        <item>ฝอยทอง</item>
+        <item>บัวลอย</item>
+        <item>ลำเจียก</item>
+        <item>ลิ้นจี่</item>
+        <item>ทุเรียน</item>
+        <item>เงาะ</item>
+        <item>พลับจีน</item>
+        <item>ผลเกด</item>
+
+
+    </string-array>
 </resources>

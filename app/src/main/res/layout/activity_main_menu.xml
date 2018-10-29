@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backg"
+    tools:context=".MainMenuActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton72"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/h" />
+
+    <ImageButton
+        android:id="@+id/imageButton69"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:onClick="clickM"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton72"
+        app:srcCompat="@drawable/m" />
+
+    <ImageButton
+        android:id="@+id/imageButton70"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:onClick="clickS"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton69"
+        app:srcCompat="@drawable/s" />
+
+    <ImageButton
+        android:id="@+id/imageButton71"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:onClick="clickF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton70"
+        app:srcCompat="@drawable/f" />
+
+    <ImageButton
+        android:id="@+id/imageButton74"
+        android:layout_width="133dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton71"
+        app:srcCompat="@drawable/si"
+        tools:layout_editor_absoluteX="251dp" />
+
+</android.support.constraint.ConstraintLayout>

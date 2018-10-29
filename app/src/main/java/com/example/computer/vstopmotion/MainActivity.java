@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     public void imb (View view){
-        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+        Intent intent = new Intent(MainActivity.this, DetailMeActivity.class);
         startActivity(intent);
     }
 }

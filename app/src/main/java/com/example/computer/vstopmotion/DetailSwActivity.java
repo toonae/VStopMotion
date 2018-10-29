@@ -36,11 +36,11 @@ public class DetailSwActivity extends AppCompatActivity {
     }
 
     public void clickVdo  (View view){
-        Intent intent = new Intent(DetailSwActivity.this, DetailFr2Activity.class);
+        Intent intent = new Intent(DetailSwActivity.this, VdostopSwActivity.class);
         startActivity(intent);
     }
     public void clickNext  (View view){
-        Intent intent = new Intent(DetailSwActivity.this, DetailFr2Activity.class);
+        Intent intent = new Intent(DetailSwActivity.this, VdoSwActivity.class);
         startActivity(intent);
     }
 
