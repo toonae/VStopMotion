@@ -17,13 +17,15 @@ import java.util.Locale;
 
 public class ListViewAdapter extends BaseAdapter {
 
+    //variables
     Context mContext;
     LayoutInflater inflater;
     List<Model> modellist;
     ArrayList<Model> arrayList;
 
 
-    public ListViewAdapter(Context context,List<Model> modellist) {
+    //constructor
+    public ListViewAdapter(Context context, List<Model> modellist) {
         mContext = context;
         this.modellist = modellist;
         inflater = LayoutInflater.from(mContext);
@@ -31,8 +33,8 @@ public class ListViewAdapter extends BaseAdapter {
         this.arrayList.addAll(modellist);
     }
 
-    public class ViewHolder{
-        TextView mTitleTv,mDescTv;
+    public class ViewHolder {
+        TextView mTitleTv, mDescTv;
         ImageView mIconIv;
     }
 
@@ -54,7 +56,7 @@ public class ListViewAdapter extends BaseAdapter {
     @Override
     public View getView(final int postition, View view, ViewGroup parent) {
         ViewHolder holder;
-        if (view==null){
+        if (view == null) {
             holder = new ViewHolder();
             view = inflater.inflate(R.layout.row, null);
 
@@ -62,48 +64,140 @@ public class ListViewAdapter extends BaseAdapter {
             holder.mTitleTv = view.findViewById(R.id.mainTitle);
             holder.mDescTv = view.findViewById(R.id.mainDesc);
             holder.mIconIv = view.findViewById(R.id.mainIcon);
+
             view.setTag(holder);
 
+        } else {
+            holder = (ViewHolder) view.getTag();
         }
-        else {
-            holder = (ViewHolder)view.getTag();
-        }
+        //set the results into textviews
         holder.mTitleTv.setText(modellist.get(postition).getTitle());
         holder.mDescTv.setText(modellist.get(postition).getDesc());
         //set the result in imageview
         holder.mIconIv.setImageResource(modellist.get(postition).getIcon());
 
-        view.setOnClickListener(new View.OnClickListener(){
+        //listview item clicks
+        view.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
+                //code later
+                //1.
+                if (modellist.get(postition).getTitle().equals("ยำใหญ่")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailMeActivity.class);
 
-                if (modellist.get(postition).getTitle().equals("ยำใหญ่")){
-                    Intent intent = new Intent(mContext,NewActivity.class);
-                    intent.putExtra("actionBarTitle","ยำใหญ่");
-                    intent.putExtra("contentTv","ยำใหญ่...");
                     mContext.startActivity(intent);
                 }
 
-            }
+                if (modellist.get(postition).getTitle().equals("แกงอ่อม")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailMe1Activity.class);
 
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("แกงไตปลา")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailMe2Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("พล่าเนื้อ")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailMe3Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("ตับเหล็ก")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailMe4Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("ข้าวเหนียวสังขยา")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailSwActivity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("ซ่าหริ่ม")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailSw1Activity.class);
+
+                    mContext.startActivity(intent);
+                }if (modellist.get(postition).getTitle().equals("ฝอยทอง")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailSw2Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("บัวลอย")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailSw3Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("ลำเจียก")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailSw4Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("น้อยหน่า")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailFrActivity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("ทุเรียน")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailFr1Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("เงาะ")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailFr2Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("มะม่วง")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailFr3Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+                if (modellist.get(postition).getTitle().equals("ผลเกด")) {
+                    //start NewActivity with title for actionbar and text for textview
+                    Intent intent = new Intent(mContext, DetailFr4Activity.class);
+
+                    mContext.startActivity(intent);
+                }
+
+
+
+            }
         });
 
-        return null;
+
+        return view;
     }
 
-    public void filter(String charText) {
+    //filter
+    public void filter(String charText){
         charText = charText.toLowerCase(Locale.getDefault());
         modellist.clear();
-        if (charText.length() == 0) {
+        if (charText.length()==0){
             modellist.addAll(arrayList);
-        } else {
-            for (Model model : arrayList) {
+        }
+        else {
+            for (Model model : arrayList){
                 if (model.getTitle().toLowerCase(Locale.getDefault())
-                        .contains(charText)) {
+                        .contains(charText)){
                     modellist.add(model);
                 }
             }
         }
         notifyDataSetChanged();
     }
-    }
+
+}

@@ -16,7 +16,7 @@ public class VdostopMe1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_vdostop_me1);
 
         final VideoView myVideoV = (VideoView)findViewById(R.id.videoView7);
-        myVideoV.setVideoURI(Uri.parse("android.resource://" + getPackageName() +"/"+R.raw.vdoyam));
+        myVideoV.setVideoURI(Uri.parse("android.resource://" + getPackageName() +"/"+R.raw.vgoom));
         myVideoV.setMediaController(new MediaController(this));
         myVideoV.requestFocus();
 

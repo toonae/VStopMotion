@@ -17,7 +17,7 @@ public class DetailMeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_me);
 
         volumnImageButton = findViewById(R.id.imageButton61);
-        mediaPlayer = MediaPlayer.create(this, R.raw.tu);
+        mediaPlayer = MediaPlayer.create(this, R.raw.syam);
         volumnImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

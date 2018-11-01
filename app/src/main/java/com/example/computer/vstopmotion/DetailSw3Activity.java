@@ -17,7 +17,7 @@ public class DetailSw3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_sw3);
 
         volumnImageButton = findViewById(R.id.imageButton19);
-        mediaPlayer = MediaPlayer.create(this, R.raw.tu);
+        mediaPlayer = MediaPlayer.create(this, R.raw.sbua);
         volumnImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

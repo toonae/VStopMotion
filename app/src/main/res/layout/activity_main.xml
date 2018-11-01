@@ -6,76 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <Button
+        android:id="@+id/button63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="backToMain"
+        android:text="ย้อนกลับ"
+        android:textColor="@android:color/background_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
+
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="448dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <ImageButton
-                android:id="@+id/imb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="imb"
-                app:srcCompat="@drawable/nyam" />
-
-            <ImageView
-                android:id="@+id/im6"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                app:srcCompat="@drawable/pic" />
-
-            <ImageButton
-                android:id="@+id/imb1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ngangoom" />
-
-            <ImageView
-                android:id="@+id/im1"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                app:srcCompat="@drawable/pic" />
-
-            <ImageButton
-                android:id="@+id/imb2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ntai" />
-
-            <ImageView
-                android:id="@+id/im2"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                app:srcCompat="@drawable/pic" />
-
-            <ImageButton
-                android:id="@+id/imb3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/npal" />
-
-            <ImageView
-                android:id="@+id/im3"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                app:srcCompat="@drawable/pic" />
-
-            <ImageButton
-                android:id="@+id/imb4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ntub" />
-
-            <ImageView
-                android:id="@+id/im4"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                app:srcCompat="@drawable/pic" />
-        </LinearLayout>
-    </ScrollView>
+    </ListView>
 
 </android.support.constraint.ConstraintLayout>

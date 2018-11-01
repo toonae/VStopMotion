@@ -14,7 +14,7 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void clickM (View view){
-        Intent intent = new Intent(MainMenuActivity.this, MainActivity.class);
+        Intent intent = new Intent(MainMenuActivity.this, MainMeActivity.class);
         startActivity(intent);
     }
     public void clickS (View view){
@@ -27,7 +27,15 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void clickSearch (View view){
-        Intent intent = new Intent(MainMenuActivity.this, SearchActivity.class);
+        Intent intent = new Intent(MainMenuActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void clickPro (View view){
+        Intent intent = new Intent(MainMenuActivity.this, NewActivity.class);
+        startActivity(intent);
+    }
+    public void clickH (View view){
+        Intent intent = new Intent(MainMenuActivity.this, HistoryActivity.class);
         startActivity(intent);
     }
 }

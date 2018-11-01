@@ -16,7 +16,7 @@ public class DetailSw2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_sw2);
         volumnImageButton = findViewById(R.id.imageButton18);
-        mediaPlayer = MediaPlayer.create(this, R.raw.tu);
+        mediaPlayer = MediaPlayer.create(this, R.raw.stong);
         volumnImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

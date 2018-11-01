@@ -16,7 +16,7 @@ public class VdostopSw4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_vdostop_sw4);
 
         final VideoView myVideoV = (VideoView)findViewById(R.id.videoView3);
-        myVideoV.setVideoURI(Uri.parse("android.resource://" + getPackageName() +"/"+R.raw.vdoyam));
+        myVideoV.setVideoURI(Uri.parse("android.resource://" + getPackageName() +"/"+R.raw.vlum));
         myVideoV.setMediaController(new MediaController(this));
         myVideoV.requestFocus();
 

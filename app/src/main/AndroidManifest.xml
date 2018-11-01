@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchActivity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,13 +17,11 @@
             </intent-filter>
         </activity>
 
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".VdoSw1Activity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".DetailFrActivity" />
         <activity android:name=".DetailFr1Activity" />
         <activity android:name=".DetailFr2Activity" />
@@ -63,10 +61,9 @@
         <activity android:name=".VdoSwActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".MainMenuActivity" />
-        <activity android:name=".NewActivity"
-            android:parentActivityName=".SearchActivity">
-
-        </activity>
+        <activity android:name=".NewActivity" />
+        <activity android:name=".MainMeActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
