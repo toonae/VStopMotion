@@ -1,164 +1,92 @@
 package com.example.computer.vstopmotion;
 
-import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.EditText;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 
 public class SearchActivity extends AppCompatActivity {
 
-    private String[] data;
-    private ListView listView;
+    ListView listView;
+    ListViewAdapter adapter;
+    String[] title;
+    String[] description;
+    int[] icon;
+    ArrayList<Model> arrayList = new ArrayList<Model>();
 
-    private ArrayList<ListEntry>data_normal;
-    private ArrayList<ListEntry>data_search;
-    private EditText main_listview_edittext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        data = getResources().getStringArray(R.array.data);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("ค้นหาชื่อ...");
+
+        title = new String[]{"ยำใหญ่", "แกงอ่อม", "แกงไตปลา", "พล่าเนื้อ", "ตับเหล็ก"};
+        description = new String[]{"ยำใหญ่...", "แกงอ่อม...", "แกงไตปลา...", "พล่าเนื้อ...", "ตับเหล็ก..."};
+        icon = new int[]{R.drawable.yamm, R.drawable.goom, R.drawable.taipla, R.drawable.pal, R.drawable.tub};
 
 
-        data_normal = new ArrayList<ListEntry>();
-        for (int i = 0; i < data.length; i++) {
-            ListEntry listEntry = new ListEntry();
-            listEntry.setTitle(data[i]);
-            data_normal.add(listEntry);
+        listView = findViewById(R.id.listview);
+
+        for (int i = 0; i < title.length; i++) {
+            Model model = new Model(title[i], description[i], icon[i]);
+            //bind all strings in an array
+            arrayList.add(model);
         }
 
-        main_listview_edittext = (EditText) findViewById(R.id.main_listview_edittext) ;
-        listView = (ListView) findViewById(R.id.main_listview);
-        doListNormal();
+        //pass results to listViewAdapter class
+        adapter = new ListViewAdapter(this, arrayList);
 
-        main_listview_edittext.addTextChangedListener(new TextWatcher() {
+        //bind the adapter to the listview
+        listView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+
+        MenuItem myActionMenuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView)myActionMenuItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public boolean onQueryTextSubmit(String s) {
 
+                return false;
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (main_listview_edittext.length() != 0) {
-                    data_search = new ArrayList<ListEntry>();
-                    for (int i = 0; i < data_normal.size(); i++) {
-                        if (data_normal.get(i).getTitle().toLowerCase().contains(s)) {
-                            ListEntry listEntry = new ListEntry();
-                            listEntry.setTitle(data_normal.get(i).getTitle());
-                            data_search.add(listEntry);
-                        }
-                    }
-                    doListSearch();
-                }else {
-                    doListNormal();
+            public boolean onQueryTextChange(String s) {
+                if (TextUtils.isEmpty(s)) {
+                    adapter.filter("");
+                    listView.clearTextFilter();
                 }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-    }
-
-
-    private void doListSearch(){
-        listView.setAdapter(new CustomAdapter(data_search));
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(SearchActivity.this,data_search.get(position).getTitle(),Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(SearchActivity.this,MainActivity.class);
-                intent.putExtra("ยำใหญ่",data_search.get(position).getTitle());
-                startActivity(intent);
-
-                Intent intent1 = new Intent(SearchActivity.this,MainActivity.class);
-                intent.putExtra("แกงอ่อม",data_search.get(position).getTitle());
-                startActivity(intent1);
-
+                else {
+                    adapter.filter(s);
+                }
+                return true;
             }
         });
+        return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
-    private  void doListNormal(){
-        listView.setAdapter(new CustomAdapter(data_normal));
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(SearchActivity.this,data_normal.get(position).getTitle(),Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(SearchActivity.this,MainActivity.class);
-                intent.putExtra("ยำใหญ่",data_normal.get(position).getTitle());
-                startActivity(intent);
-
-                Intent intent1 = new Intent(SearchActivity.this,MainActivity.class);
-                intent.putExtra("แกงอ่อม",data_normal.get(position).getTitle());
-                startActivity(intent1);
-
-            }
-        });
+        if (id==R.id.action_settings){
+            //do your functionality here
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
+}
 
-
-
-    public class CustomAdapter extends BaseAdapter {
-
-        private ArrayList<ListEntry> mData;
-        private Holder holder = new Holder();
-
-        public  CustomAdapter(ArrayList<ListEntry>data){
-            this.mData = data;
-        }
-
-        @Override
-        public int getCount() {
-            return mData.size();
-        }
-
-        @Override
-        public Object getItem(int i) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            convertView = View.inflate(SearchActivity.this,R.layout.listview_item_layout,null);
-            if (convertView !=null) {
-
-                holder.title = (TextView) convertView.findViewById(R.id.listview_item_title);
-                holder.title.setText(mData.get(position).getTitle());
-                convertView.setTag(holder);
-            }else {
-                convertView = (View) convertView.getTag();
-            }
-            return convertView;
-        }
-
-        public class Holder{
-            public TextView title;
-        }
-    }
-    }
 

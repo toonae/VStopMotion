@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".MainMenuActivity">
+        <activity android:name=".SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
@@ -61,7 +61,12 @@
         <activity android:name=".VdoMe3Activity" />
         <activity android:name=".VdoMe4Activity" />
         <activity android:name=".VdoSwActivity" />
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".MainMenuActivity" />
+        <activity android:name=".NewActivity"
+            android:parentActivityName=".SearchActivity">
+
+        </activity>
     </application>
 
 </manifest>

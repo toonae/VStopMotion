@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
-
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ListView>
-
+    android:gravity="center"
+    tools:context=".NewActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:text="Item Detail Here..."
+        android:textSize="30sp"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -25,4 +25,9 @@ public class MainMenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MainMenuActivity.this, MainFrActivity.class);
         startActivity(intent);
     }
+
+    public void clickSearch (View view){
+        Intent intent = new Intent(MainMenuActivity.this, SearchActivity.class);
+        startActivity(intent);
+    }
 }
